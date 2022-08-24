@@ -1,0 +1,17 @@
+{
+  "name": "odescroll",
+  "version": "1.0.5",
+  "description": "ODE Scroll is a modern and awesome animate on scroll library using CSS3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "animate on scroll",
+    "animate",
+    "scroll",
+    "ode"
+  ],
+  "author": "omar shaar",
+  "license": "ISC"
+}
