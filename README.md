@@ -87,18 +87,3 @@ with option
 
 ## Demos
 * https://scroll.o-de.org/demos
-
-
-
-## Animations
-
- * Fade animations:
-    * fade-up
-    * fade-down
-    * fade-left
-    * fade-right
-    * fade-up-right
-    * fade-up-left
-    * fade-down-right
-    * fade-down-left
-
