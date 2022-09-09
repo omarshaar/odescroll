@@ -86,4 +86,4 @@ with option
 
 
 ## Demos
-* https://scroll.o-de.org/demos
+* https://odescroll.o-de.org/demos
