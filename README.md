@@ -1,89 +1,147 @@
-# Awesome animate on scroll
-ODE Scroll is a modern and awesome animate on scroll library using CSS3. see demos and get started now.
-## ⚙ installation
+# ODE Scroll
+
+Modern and lightweight scroll animation library built with CSS3. ODE Scroll helps you create smooth reveal and entrance effects as elements enter the viewport, without heavy dependencies or complex setup.
+
+## Features
+
+- Lightweight and easy to integrate
+- CSS3-based motion effects
+- Works with plain HTML and JavaScript
+- Supports global and per-element configuration
+- Minimal setup for landing pages, portfolios, and marketing sites
+
+## Live Demo
+
+Explore the live demo here:
+
+- https://odescroll.eano-shop.com/
+
+## Installation
 
 ### CDN
-Add styles in `<head>`:
+
+Add the stylesheet in the `<head>` section:
 
 ```html
-  <link rel="stylesheet" href="https://unpkg.com/odescroll@1.0.3/styles.css" />
+<link rel="stylesheet" href="https://unpkg.com/odescroll@1.0.3/styles.css" />
 ```
 
-Add script right before closing `</body>` tag, and initialize ODEScroll:
+Add the script before the closing `</body>` tag and initialize the library:
+
 ```html
-  <script src="https://unpkg.com/odescroll@1.0.3/odescroll.js"></script>
-  <script>
-    odescroll.init();
-  </script>
+<script src="https://unpkg.com/odescroll@1.0.3/odescroll.js"></script>
+<script>
+  odescroll.init();
+</script>
 ```
 
-### package managers
+### Package managers
 
-* `npm install --save odescroll`
-or * `yarn add odescoll`
+```bash
+npm install --save odescroll
+```
 
+```bash
+yarn add odescroll
+```
 
+### Import in JavaScript
 
-#### import files
 ```js
-  import { odescroll } from "odescroll"
-  import "odescroll/styles.css"
+import { odescroll } from "odescroll";
+import "odescroll/styles.css";
 ```
 
 ## Usage
 
-### 1- Initialize 
+### 1. Initialize the library
 
-Call initialize function after dom content loaded
+Call the initializer after the document is ready:
+
 ```js
-  odescroll.init()
+odescroll.init();
 ```
 
-with Options
+You can also pass custom options:
+
 ```js
-  odescroll.init({
-    option: value
-  })
+odescroll.init({
+  option: value
+});
 ```
 
-### Options Table
+### Options
 
-| option           |     dataType    |  default                 | values           | Description                                               |
-|------------------|-----------------|--------------------------|------------------|-----------------------------------------------------------|
-| transition       | number          |   0.8s                   | 0-∞              |                                                           |
-| easing           | string          |   ease-out               | custem           |                                                           |
-| once             | boolean         |   true                   | true/false       |                                                           |
-| oneDirection     | boolean         |   true                   | true/false       |                                                           |
-| threshold        | number          |   0.8                    | 0 - 1            |                                                           |
+| Option | Type | Default | Accepted Values | Description |
+|--------|------|---------|-----------------|-------------|
+| transition | number | 0.8s | 0-∞ | Animation duration |
+| easing | string | ease-out | custom | Animation easing |
+| once | boolean | true | true/false | Trigger animation only once |
+| oneDirection | boolean | true | true/false | Restrict motion to one direction |
+| threshold | number | 0.8 | 0 - 1 | Visibility threshold |
 
-
-
-### custem options for each Element as Attribute
-
-* data-odescroll-transition
-* data-odescroll-easing
-
-### 2- Set animation 
+### 2. Add scroll animations to elements
 
 ```html
-  <div data-odescroll-container>
-      <div data-odescroll="fade-down"> 
-          <!-- children -->
-      </div>
+<div data-odescroll-container>
+  <div data-odescroll="fade-down">
+    <!-- content -->
   </div>
+</div>
 ```
 
-with option
+With custom per-element settings:
 
 ```html
-  <div data-odescroll-container>
-      <div data-odescroll="fade-down" data-odescroll-transition="5" data-odescroll-easing="ease-in"> 
-          <!-- children -->
-      </div>
+<div data-odescroll-container>
+  <div
+    data-odescroll="fade-down"
+    data-odescroll-transition="5"
+    data-odescroll-easing="ease-in"
+  >
+    <!-- content -->
   </div>
+</div>
 ```
 
+### Custom attributes
 
+You can configure individual elements using:
 
-## Demos
-* https://odescroll.o-de.org/
+- `data-odescroll-transition`
+- `data-odescroll-easing`
+
+## Example
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ODE Scroll Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/odescroll@1.0.3/styles.css" />
+  </head>
+  <body>
+    <div data-odescroll-container>
+      <section data-odescroll="fade-up">
+        <h1>Hello ODE Scroll</h1>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/odescroll@1.0.3/odescroll.js"></script>
+    <script>
+      odescroll.init();
+    </script>
+  </body>
+</html>
+```
+
+## License
+
+This project is open for use and modification under its license terms.
+
+## Support
+
+For questions, improvements, or contributions, feel free to open an issue or reach out through the project repository.
+
